@@ -1,98 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-<head prefix="og: http://ogp.me/ns#">
+<head>
 <meta charset="utf-8">
-<title>Tic-Tac-Toe - Play retro Tic-Tac-Toe online for free</title>
-<meta name="description" content="Play the classic Tic-Tac-Toe game (also called Noughts and Crosses) for free online with one or two players.">
-<meta name="author" content="Neave Interactive">
-<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
-<meta name="referrer" content="origin">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="Tic-Tac-Toe">
-<meta name="application-name" content="Tic-Tac-Toe">
-<meta name="msapplication-tooltip" content="Tic-Tac-Toe">
-<meta name="msapplication-starturl" content="https://playtictactoe.org/">
-<meta name="msapplication-TileImage" content="https://playtictactoe.org/assets/images/icon-200.png">
-<meta name="msapplication-TileColor" content="#000">
-<meta name="msapplication-navbutton-color" content="#000">
-<meta name="theme-color" content="#000">
-<meta name="darkreader-lock" content="yes">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://playtictactoe.org/">
-<meta property="og:site_name" content="Tic-Tac-Toe">
-<meta property="og:title" content="Tic-Tac-Toe - Play retro Tic-Tac-Toe online for free">
-<meta property="og:description" content="Play the classic Tic-Tac-Toe game (also called Noughts and Crosses) for free online with one or two players.">
-<meta property="og:image" content="https://playtictactoe.org/assets/images/icon-200.png">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@neave">
-<meta name="twitter:title" content="Tic-Tac-Toe">
-<meta name="twitter:description" content="Play the classic Tic-Tac-Toe game (also called Noughts and Crosses) for free online with one or two players.">
-<meta name="twitter:image" content="https://playtictactoe.org/assets/images/icon-200.png">
-<link rel="shortcut icon" href="assets/images/icon-16.png">
-<link rel="icon" sizes="16x16" href="assets/images/icon-16.png">
-<link rel="icon" sizes="32x32" href="assets/images/icon-32.png">
-<link rel="icon" sizes="100x100" href="assets/images/icon-100.png">
-<link rel="icon" sizes="200x200" href="assets/images/icon-200.png">
-<link rel="icon" sizes="800x800" href="assets/images/icon-800.png">
-<link rel="image_src" href="assets/images/icon-200.png">
-<link rel="apple-touch-icon-precomposed" href="assets/images/icon-200.png">
-<style>@keyframes neave-anim{to{background-position:0 400%}}@keyframes fade-anim{0%{opacity:0}40%{opacity:0}50%{opacity:1}60%{opacity:0}100%{opacity:0}}@keyframes fade-mid-anim{0%{opacity:.5}40%{opacity:.5}50%{opacity:1}60%{opacity:.5}100%{opacity:.5}}.neave{position:absolute;display:block;left:15px;left:calc(15px + env(safe-area-inset-left));top:15px;top:calc(15px + env(safe-area-inset-top));width:44px;height:44px;margin:0;padding:0;z-index:100}.neave .title{display:none}.neave svg{position:absolute;left:0;top:0;z-index:100;border-radius:50%;border:2px solid #fff;margin:0;padding:0;box-sizing:content-box;pointer-events:none}.mobile .neave svg{animation:fade-mid-anim 5s infinite ease-in-out}.neave .disc{position:absolute;display:block;width:44px;height:44px;background-color:#9fc;background-image:linear-gradient(to bottom,#9fc 0%,#9cf 25%,#f9c 50%,#fc9 75%,#9fc 100%);background-size:100% 400%;border-radius:50%;pointer-events:none;animation:neave-anim 8s infinite linear;opacity:0;will-change:opacity;transition:opacity .2s ease-out}.mobile .neave .disc{animation:neave-anim 8s infinite linear,fade-anim 5s infinite ease-in-out}body:not(.mobile) .neave:hover .disc{opacity:1}.neave:active{margin-top:1px}html{-moz-box-sizing:border-box;box-sizing:border-box}.neave{-moz-box-sizing:content-box;box-sizing:content-box}*,*:before,*:after{-moz-box-sizing:inherit;box-sizing:inherit}body{margin:0;background-color:#000;color:#fff;font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%}a{color:#fff}.game{position:absolute;top:50%;left:50%;width:600px;height:600px;margin-left:-300px;margin-top:-370px;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;tap-highlight-color:transparent}.alt{display:none}.error{text-align:center;padding:40px 20px;line-height:1.5}.error a{color:#fff;text-decoration:underline}.board{width:100%;height:100%}@-webkit-keyframes border-blink{50%{border-color:#000}}@-moz-keyframes border-blink{50%{border-color:#000}}@keyframes border-blink{50%{border-color:#000}}@-webkit-keyframes blink{50%{visibility:hidden}}@-moz-keyframes blink{50%{visibility:hidden}}@keyframes blink{50%{visibility:hidden}}@-webkit-keyframes appear{from{-webkit-transform:scale(0.3);transform:scale(0.3)}to{-webkit-transform:scale(1);transform:scale(1)}}@-moz-keyframes appear{from{-moz-transform:scale(0.3);transform:scale(0.3)}to{-moz-transform:scale(1);transform:scale(1)}}@keyframes appear{from{transform:scale(0.3)}to{transform:scale(1)}}.square{float:left;width:33.333333333%;height:33.333333333%;border-width:5px;border-color:#fff;-webkit-transition:background-color .1s;-moz-transition:background-color .1s;transition:background-color .1s;will-change:background-color,border-color;cursor:pointer}.square:focus{outline:0;background-color:#333}.square.top{border-bottom-style:solid}.square.bottom{border-top-style:solid}.square.left{clear:both;border-right-style:solid}.square.right{border-left-style:solid}.square.right>div{margin-left:-5px}.square.bottom>div{margin-top:-5px}.board.tie .square{-webkit-animation:border-blink .3s steps(1) 3;-moz-animation:border-blink .3s steps(1) 3;animation:border-blink .3s steps(1) 3}.board .square>div{-webkit-transition:opacity .1s;-moz-transition:opacity .1s;transition:opacity .1s}.board.tie .square>div,.board.win .square:not(.win)>div{opacity:.5}.square.win>div{-webkit-animation:blink .3s steps(1) 3;-moz-animation:blink .3s steps(1) 3;animation:blink .3s steps(1) 3}.o{left:16.666666667%;top:16.666666667%;width:66.666666667%;height:66.666666667%;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;border:20px solid #fff}.x{width:100%;height:100%}.square .x,.square .o{position:relative;will-change:transform;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);-webkit-animation:appear .2s cubic-bezier(0.5,1.8,0.1,1.1);-moz-animation:appear .2s cubic-bezier(0.5,1.8,0.1,1.1);animation:appear .2s cubic-bezier(0.5,1.8,0.1,1.1)}.x:before,.x:after{position:absolute;content:"";display:block;background-color:#fff;left:90px;top:20px;width:20px;height:160px;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}.x:before{-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);transform:rotate(-45deg)}.x:after{-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);transform:rotate(45deg)}.restart{position:absolute;top:0;width:100%;height:100%;cursor:pointer;background-color:rgba(0,0,0,0)}.scores{position:absolute;left:50%;top:50%;width:600px;margin-left:-300px;margin-top:280px;text-align:center;cursor:pointer;-webkit-user-select:none;user-select:none}.scores p{font:20px "Raleway",sans-serif;font-weight:400;text-transform:uppercase;line-height:1;display:inline-block;margin:0;padding:0;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.scores .swap{display:inline-block;vertical-align:top;width:30px;height:30px;margin:-5px -30px 0 0;opacity:.5;cursor:pointer;outline:0;-webkit-transition:opacity .1s;-moz-transition:opacity .1s;transition:opacity .1s}body:not(.mobile) .scores:hover .swap{opacity:1}body:not(.mobile) .scores:active .swap{opacity:.75}.scores .score{font-size:50px;display:block;height:60px;padding:10px 0 0 0;will-change:transform;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.scores .score.appear{-webkit-animation:appear .3s cubic-bezier(0.5,4,0.1,1.1);-moz-animation:appear .3s cubic-bezier(0.5,4,0.1,1.1);animation:appear .3s cubic-bezier(0.5,4,0.1,1.1)}.scores .o{display:inline-block;width:13px;height:13px;border-width:2px;margin:1px;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.scores .x{display:inline-block;width:17px;height:17px;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.scores .x:before,.scores .x:after{left:0;top:2px;margin-left:7px;width:2px;height:17px}.player1,.player2{width:230px;white-space:nowrap}.scores.p1 .p2{display:none}.scores.p2 .p1{display:none}.scores .turn{opacity:.5}.mute{position:absolute;width:38px;height:38px;right:15px;right:calc(15px + env(safe-area-inset-right));top:15px;top:calc(15px + env(safe-area-inset-top));opacity:.5;cursor:pointer;-webkit-user-select:none;user-select:none;-webkit-transition:opacity .1s;-moz-transition:opacity .1s;transition:opacity .1s}body:not(.mobile) .mute:hover{opacity:1}.share{display:inline-block;vertical-align:top}.ad{outline:1px solid #333;background-color:#333;overflow:hidden}.adsbygoogle{display:inline-block}.ad.skyscraper1,.ad.skyscraper2,.ad.skyscraper1 .adsbygoogle,.ad.skyscraper2 .adsbygoogle{width:160px;height:600px}.ad.skyscraper1{position:absolute;top:50%;margin-top:-300px;left:0}.ad.skyscraper2{position:absolute;top:50%;margin-top:-300px;right:0}.ad.mobile,.ad.mobile .adsbygoogle{display:block;width:100%;height:50px}.ad.mobile{position:absolute;bottom:0;bottom:env(safe-area-inset-bottom);width:100%;margin:0;overflow:hidden}.ad.mobile .adsbygoogle{margin:0 auto}.cookies{position:absolute;box-sizing:border-box;display:table;background-color:#fff;color:#000;width:100%;bottom:0;text-align:left;padding:40px;padding-bottom:calc(40px + env(safe-area-inset-bottom));padding-left:calc(40px + env(safe-area-inset-left));padding-right:calc(40px + env(safe-area-inset-right));font-size:17px;line-height:1.3;user-select:none}.cookies p{display:table-cell;margin:0;padding-right:20px;vertical-align:top}.cookies a{color:#666;text-decoration:underline;white-space:nowrap}.cookies button{padding:12px 20px;border:0;font:inherit;font-weight:bold;color:#fff;background-color:#000;cursor:pointer;outline:0;cursor:pointer;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent;border-radius:6px;white-space:nowrap}body.cookies-consent .cookies{display:none}@media(min-width:1261px){.ad.skyscraper1{margin-left:110px}.ad.skyscraper2{margin-right:110px}}@media(max-width:800px) and (min-height:661px){.ad.skyscraper2{display:none}}@media(max-height:800px){.ad.skyscraper1,.ad.skyscraper2{margin-top:-270px}}@media(max-height:660px){.neave,.mute{display:none}.ad.skyscraper1,.ad.skyscraper2{margin-top:-300px}}@media(max-width:960px),(max-height:800px){.game{width:450px;height:450px;margin-left:-225px;margin-top:-280px}.square{border-width:4px}.square.right>div{margin-left:-4px}.square.bottom>div{margin-top:-4px}.square .o{border-width:15px}.square .x:before,.square .x:after{left:67.5px;top:16px;width:15px;height:118px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}.scores{width:450px;margin-left:-225px;margin-top:210px}.scores p{font-size:17px;letter-spacing:0}.scores .score{font-size:40px;padding-top:8px;height:50px}.scores .o{width:12px;height:12px;border-width:2px;margin:0 1px}.scores .x{width:12px;height:12px}.scores .x:before,.scores .x:after{top:0;margin-left:5px;width:2px;height:14px}.player1,.player2{width:180px}}@media(max-width:800px){.ad.skyscraper2{display:none}.mute{display:block}.game,.scores{margin-left:-150px}.mobile .game,.mobile .scores{margin-left:-225px}.ipad .game,.ipad .scores{margin-left:-150px}}@media(max-width:630px){.ad.skyscraper1,.ad.skyscraper2{display:none}.neave,.mute{display:block}.game,.scores{margin-left:-225px}.cookies{display:block;font-size:15px;padding:18px;padding-bottom:calc(18px + env(safe-area-inset-bottom));padding-left:calc(18px + env(safe-area-inset-left));padding-right:calc(18px + env(safe-area-inset-right))}.cookies p{display:block;padding-right:0}.cookies button{display:block;width:100%;margin-top:18px}}@media(max-width:540px){.ad.skyscraper1,.ad.skyscraper2{display:none}.neave,.mute{display:block}}@media(max-width:540px),(max-height:630px){.game{width:300px;height:300px;margin-left:-150px;margin-top:-205px}.mobile .game{margin-left:-150px;margin-top:-215px}.square{border-width:3px}.square.right>div{margin-left:-3px}.square.bottom>div{margin-top:-3px}.square .o{border-width:10px}.square .x:before,.square .x:after{left:45px;top:13px;width:10px;height:74px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}.scores{width:320px;margin-left:-160px;margin-top:135px}.mobile .scores{margin-left:-160px;margin-top:125px}.scores p{font-size:15px}.scores .score{font-size:25px;padding-top:9px;height:50px}.scores .o{width:9px;height:9px;margin:0}.scores .x{width:10px;height:10px}.scores .x:before,.scores .x:after{margin-left:4px;height:11px}.player1,.player2{width:130px}.scores .swap svg{margin-bottom:-2px}}@media(max-height:520px){.ad.mobile,.ad.skyscraper1,.ad.skyscraper2{display:none}.neave,.mute{display:block}.mobile .game,.game{top:60px;margin-top:0}.mobile .scores,.scores{top:380px;margin-top:0;padding-bottom:0}}@media(max-width:350px){.scores .swap{display:none}}@media(min-width:421px) and (max-height:450px){.mobile .game,.game{top:10px}.mobile .scores,.scores{top:320px}}</style>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Tic-Tac-Toe — Foltz</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    background: #0d1117; color: #dbe4ee;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    display: flex; align-items: center; justify-content: center;
+    min-height: 100vh; overflow: hidden;
+    -webkit-user-select: none; user-select: none;
+  }
+  .wrap { text-align: center; padding: 16px; }
+  header { font-size: 26px; font-weight: 800; letter-spacing: 4px; color: #f0f6fc; }
+  header span { color: #39d353; font-size: 14px; letter-spacing: 2px; margin-left: 8px; }
+  .scores {
+    display: flex; gap: 28px; justify-content: center;
+    margin: 14px 0; font-size: 12px; color: #7d8590; letter-spacing: 1px;
+  }
+  .scores b { display: block; font-size: 24px; margin-top: 4px; }
+  #sx b { color: #39d353; }
+  #st b, #so b { color: #f0f6fc; }
+  .turn { text-shadow: 0 0 12px currentColor; }
+  #board {
+    display: grid; grid-template-columns: repeat(3, 110px); grid-template-rows: repeat(3, 110px);
+    gap: 8px; justify-content: center;
+  }
+  .cell {
+    background: #010409; border: 1px solid #21262d; border-radius: 12px;
+    font-size: 56px; font-weight: 800; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: border-color 0.12s, box-shadow 0.12s;
+    touch-action: manipulation;
+  }
+  .cell:not(.taken):hover { border-color: #39d353; box-shadow: 0 0 18px rgba(57, 211, 83, 0.25); }
+  .cell.x { color: #39d353; text-shadow: 0 0 16px rgba(57, 211, 83, 0.7); }
+  .cell.o { color: #f0f6fc; text-shadow: 0 0 16px rgba(240, 246, 252, 0.5); }
+  .cell.win { border-color: #39d353; box-shadow: 0 0 22px rgba(57, 211, 83, 0.55); animation: blink 0.45s steps(2) 3; }
+  @keyframes blink { 50% { background: rgba(57, 211, 83, 0.18); } }
+  #msg { margin-top: 14px; min-height: 20px; font-size: 13px; letter-spacing: 2px; color: #39d353; }
+  .row { display: flex; gap: 10px; justify-content: center; margin-top: 12px; }
+  button {
+    background: #161b22; color: #dbe4ee; border: 1px solid #21262d;
+    font: inherit; font-size: 12px; letter-spacing: 1px;
+    padding: 9px 18px; border-radius: 8px; cursor: pointer;
+  }
+  button.active { border-color: #39d353; color: #39d353; }
+  footer { margin-top: 12px; font-size: 11px; color: #484f58; letter-spacing: 1px; }
+  @media (max-width: 420px) {
+    #board { grid-template-columns: repeat(3, 88px); grid-template-rows: repeat(3, 88px); }
+    .cell { font-size: 44px; }
+  }
+</style>
 </head>
 <body>
-<a href="https://neave.com/" target="_top" class="neave">
-<span class="disc"></span>
-<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 512 512">
-<path fill="#fff" d="M361 360.95L191 290.5v57.1l-40 16.6V151.05l170 70.3v-57.2l1-.4.1-.05 38.9-15.9"></path>
-</svg>
-<span class="title">Neave Interactive</span>
-</a>
-<div class="alt">
-<h1>Tic-Tac-Toe</h1>
-<p>Play a retro version of tic-tac-toe (noughts and crosses, tres en raya) against the computer or with two players.</p>
+<div class="wrap">
+  <header>TIC-TAC-TOE<span>//FOLTZ</span></header>
+  <div class="scores">
+    <div id="sx">X<b>0</b></div>
+    <div id="st">TIES<b>0</b></div>
+    <div id="so">O<b>0</b></div>
+  </div>
+  <div id="board"></div>
+  <div id="msg">your move</div>
+  <div class="row">
+    <button id="m1" class="active">1P vs CPU</button>
+    <button id="m2">2 PLAYERS</button>
+    <button id="rs">RESTART</button>
+  </div>
+  <footer>click a square or press 1-9 · r = restart</footer>
 </div>
-<div class="mute">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-<g fill="#fff">
-<polygon points="14.025,38.004 14.025,61.993 31.548,61.993 55.537,85.982 55.537,14.018 31.552,38.004"></polygon>
-<path d="M67.41,34.095l-4.243,4.239c6.43,6.432,6.43,16.896,0,23.324L67.41,65.9C76.179,57.129,76.179,42.864,67.41,34.095z"></path>
-<path d="M75.89,25.616l-4.241,4.239c11.105,11.105,11.105,29.176,0,40.284l4.241,4.241C89.337,60.934,89.337,39.06,75.89,25.616z"></path>
-</g>
-</svg>
-</div>
-<div class="game">
-<div class="board">
-<div class="square top left" tabindex="0"><div></div></div>
-<div class="square top" tabindex="0"><div></div></div>
-<div class="square top right" tabindex="0"><div></div></div>
-<div class="square left" tabindex="0"><div></div></div>
-<div class="square" tabindex="0"><div></div></div>
-<div class="square right" tabindex="0"><div></div></div>
-<div class="square bottom left" tabindex="0"><div></div></div>
-<div class="square bottom" tabindex="0"><div></div></div>
-<div class="square bottom right" tabindex="0"><div></div></div>
-</div>
-<div class="restart"></div>
-</div>
-<div class="scores p1">
-<p class="player1"><span class="p1">Player</span><span class="p2">Player 1</span> (<span class="x"></span>)<span class="score">0</span></p>
-<p class="ties">Tie<span class="score">0</span></p>
-<p class="player2"><span class="p1">Computer</span><span class="p2">Player 2</span> (<span class="o"></span>)<span class="score">0</span></p>
-<div class="swap" tabindex="0">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-<g fill="#fff">
-<path class="p1" d="M49.947,90.991c0.693,0,1.41,0.02,2.104,0c13.547-0.201,26.439-1.723,28.775-3.945 c0.537-4.928,1.195-7.311-20.65-17.644c-3.107-1.742-1.465-8.492-1.465-8.492c6.578-4.969,11.096-16.463,11.096-25.676 c0-15.921-7.18-23.453-17.756-24.234h-2.104c-10.557,0.781-17.734,8.312-17.734,24.234c0,9.213,4.496,20.707,11.078,25.676 c0,0,1.641,6.75-1.449,8.492C19.979,79.735,20.635,82.118,21.176,87.046C23.51,89.269,36.402,90.79,49.947,90.991z"></path>
-<path class="p2" d="M66.219,85h1.562c9.92-0.14,19.38-1.2,21.08-2.779c0.422-3.44,0.9-5.101-15.142-12.341 c-2.279-1.22-1.059-5.939-1.059-5.939c4.822-3.48,8.123-11.521,8.123-17.98c0-11.14-5.263-16.419-13.001-16.959h-1.562 c-7.738,0.54-13,5.799-13,16.959c0,6.46,3.301,14.5,8.121,17.98c0,0,1.221,4.719-1.059,5.939c-16.041,7.24-15.562,8.9-15.14,12.341 C46.84,83.8,56.301,84.86,66.219,85z M30.217,69h1.564c9.918-0.14,19.378-1.2,21.078-2.779c0.422-3.44,0.9-5.1-15.14-12.34 c-2.279-1.22-1.059-5.939-1.059-5.939c4.82-3.48,8.121-11.521,8.121-17.98c0-11.14-5.262-16.42-13-16.96h-1.564 c-7.738,0.54-13,5.8-13,16.96c0,6.459,3.301,14.5,8.121,17.98c0,0,1.221,4.72-1.059,5.939c-16.041,7.24-15.562,8.9-15.14,12.34 C10.839,67.8,20.299,68.86,30.217,69z"></path>
-</g>
-</svg>
-<p class="p1">1P</p>
-<p class="p2">2P</p>
-</div>
-</div>
+<script>
+"use strict";
+const WINS = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+const boardEl = document.getElementById("board");
+const msgEl = document.getElementById("msg");
+const m1Btn = document.getElementById("m1");
+const m2Btn = document.getElementById("m2");
+const cells = [];
+let board, turn, over, mode, scores, muted, AC;
+try { scores = JSON.parse(localStorage.getItem("fz_ttt_scores")) || { x: 0, ties: 0, o: 0 }; }
+catch (e) { scores = { x: 0, ties: 0, o: 0 }; }
+try { muted = localStorage.getItem("fz_ttt_mute") === "1"; } catch (e) { muted = false; }
 
-
-<script>(function(r,t){"use strict";r.onerror=function(e,r,t){return false};r.AudioContext=r.AudioContext||r.webkitAudioContext;var s=function(e){try{var r="_";e.setItem(r,r);e.removeItem(r);return true}catch(e){return false}}(r.localStorage);function o(r){var e=new XMLHttpRequest;e.open("GET","assets/audio/"+r+".mp3",true);e.responseType="arraybuffer";e.onload=function(){l.decodeAudioData(e.response,function(e){c[r]=e},function(){})};e.send()}function y(e){if(f||!c[e]){return}if(l&&l.resume){l.resume()}var r=l.createBufferSource();r.buffer=c[e];r.connect(l.destination);if(r.start){r.start(0)}else{r.noteOn(0)}}var a={},n={player1:0,player2:0,ties:0},i={player1:0,player2:0,ties:0},u="x",m="o",c={},l,v=9,f,d,L=true,p=true,q=false,h=300,S=.75,w,g=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];function b(){for(var e=a.mute.length;e--;){a.mute[e].style.display=f?"none":""}}function T(){f=!f;if(s){localStorage.setItem("muted",f.toString())}b()}function M(){q=!q;var e=a.scores.scores.classList;if(q){e.remove("p1");e.add("p2");p=true}else{e.remove("p2");e.add("p1");p=false}a.scores.player1.innerHTML=q?i.player1:n.player1;a.scores.player2.innerHTML=q?i.player2:n.player2;a.scores.ties.innerHTML=q?i.ties:n.ties;d=false;I()}function k(e,r){a.squares[r].querySelector("div").classList.add(e)}function A(){var e=a.scores.turn1.classList,r=a.scores.turn2.classList,t=a.scores.turnTies.classList;if(q&&a.restart.style.display==="none"){if(L){r.remove("turn");e.add("turn")}else{e.remove("turn");r.add("turn")}t.add("turn")}else{e.remove("turn");r.remove("turn");t.remove("turn")}}function D(e){if(w[e]!==0||x()||!q&&L){return}if(q){L=!L;w[e]=L?-1:1;k(L?u:m,e);y("note-"+(L?"low":"high"));x()}else{w[e]=-1;k(u,e);L=true;y("note-low");setTimeout(C,h)}A()}function H(s,o){a.restart.style.display="block";setTimeout(function(){var e="Game",r=q?"players ":"computer ";setTimeout(function(){d=false},h);if(o){for(var t=3;t--;){a.squares[o[t]].classList.add("win")}}switch(s){case u:a.scores.player1.innerHTML=q?++i.player1:++n.player1;a.scores.player1.classList.add("appear");a.board.classList.add("win");y("game-over");break;case m:a.scores.player2.innerHTML=q?++i.player2:++n.player2;a.scores.player2.classList.add("appear");a.board.classList.add("win");y("game-over");break;default:a.scores.ties.innerHTML=q?++i.ties:++n.ties;a.scores.ties.classList.add("appear");a.board.classList.add("tie");y("game-over-tie");break}},L&&!q?100:h+100)}function x(){for(var e=g.length;e--;){var r=g[e],t=w[r[0]]+w[r[1]]+w[r[2]];if(t===3||t===-3){H(t===3?m:u,r);return true}}var s=0;for(e=v;e--;){if(w[e]!==0){s++}}if(s===9){H();return true}return false}function C(){if(x()){return}var e,r,t,s,o,a,n=0;L=false;A();y("note-high");for(e=v;e--;){if(w[e]!==0){n++;if(n===1){a=e}}}if(n<2&&Math.random()>.2){do{o=Math.floor(Math.random()*v)}while(o===a)}else{for(e=v;e--;){for(r=v;r--;){if(w[r]!==0){continue}w[r]=1;if(x()){k(m,r);return}w[r]=0}if(w[e]!==0){continue}w[e]=1;var i=null,u=w.concat();for(r=v;r--;){if(u[r]!==0){continue}u[r]=-1;for(t=g.length;t--;){if(u[g[t][0]]+u[g[t][1]]+u[g[t][2]]===-3&&Math.random()>S){w[e]=0;w[r]=1;k(m,r);x();return}}var c=0,l=0,f=u.concat(),d=u.concat();for(t=v;t--;){if(f[t]===0){f[t]=1}if(d[t]===0){d[t]=-1}}for(t=g.length;t--;){if(f[g[t][0]]+f[g[t][1]]+f[g[t][2]]===3){c++}if(d[g[t][0]]+d[g[t][1]]+d[g[t][2]]===-3){l++}}var p=c-l;i=i==null?p:i>p?p:i;u[r]=0}if(s==null||s<i){s=i;o=e}w[e]=0}}w[o]=1;k(m,o);x()}function B(r){a.squares[r].ontouchstart=a.squares[r].onmousedown=function(e){e.preventDefault();D(r)}}function I(){if(d){return}d=true;a.restart.style.display="none";w=[0,0,0,0,0,0,0,0,0];for(var e=v;e--;){a.squares[e].classList.remove("win");a.squares[e].querySelector("div").className=""}a.scores.ties.classList.remove("appear");a.scores.player1.classList.remove("appear");a.scores.player2.classList.remove("appear");a.board.classList.remove("win");a.board.classList.remove("tie");L=p=!p;A();if(p&&!q){setTimeout(C,h)}}t.addEventListener("DOMContentLoaded",function(){a={board:t.querySelector(".board"),squares:t.querySelectorAll(".square"),restart:t.querySelector(".restart"),muteButton:t.querySelector(".mute"),mute:t.querySelectorAll(".mute path"),privacy:t.querySelector(".privacy"),scores:{scores:t.querySelector(".scores"),swap:t.querySelector(".swap"),player1:t.querySelector(".player1 .score"),player2:t.querySelector(".player2 .score"),ties:t.querySelector(".ties .score"),turn1:t.querySelector(".player1"),turn2:t.querySelector(".player2"),turnTies:t.querySelector(".ties")}};for(var e=v;e--;){B(e)}a.restart.ontouchstart=a.scores.scores.ontouchstart=function(e){e.preventDefault()};a.scores.scores.ontouchend=a.scores.scores.onclick=function(e){e.preventDefault();M()};a.restart.ontouchend=a.restart.onclick=function(e){e.preventDefault();I()};if(r.AudioContext){l=new AudioContext;o("note-high");o("note-low");o("game-over");o("game-over-tie");f=s?localStorage.getItem("muted")==="true":false;b();a.muteButton.ontouchstart=a.muteButton.onclick=function(e){e.preventDefault();T()}}I()})})(window,document);</script>
+function beep(freq, dur) {
+  if (muted) return;
+  try {
+    AC = AC || new (window.AudioContext || window.webkitAudioContext)();
+    const o = AC.createOscillator(), g = AC.createGain();
+    o.type = "sine"; o.frequency.value = freq;
+    g.gain.setValueAtTime(0.08, AC.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001, AC.currentTime + dur);
+    o.connect(g); g.connect(AC.destination);
+    o.start(); o.stop(AC.currentTime + dur);
+  } catch (e) {}
+}
+function winner(b) {
+  for (let w of WINS) {
+    const [a, c, d] = w;
+    if (b[a] && b[a] === b[c] && b[a] === b[d]) return { who: b[a], line: w };
+  }
+  return b.every(v => v) ? { who: "tie", line: null } : null;
+}
+function minimax(b, maximizing, depth) {
+  const r = winner(b);
+  if (r) {
+    if (r.who === "tie") return 0;
+    return r.who === "o" ? 10 - depth : depth - 10;
+  }
+  if (maximizing) {
+    let best = -Infinity;
+    for (let i = 0; i < 9; i++) if (!b[i]) {
+      b[i] = "o";
+      best = Math.max(best, minimax(b, false, depth + 1));
+      b[i] = "";
+    }
+    return best;
+  }
+  let best = Infinity;
+  for (let i = 0; i < 9; i++) if (!b[i]) {
+    b[i] = "x";
+    best = Math.min(best, minimax(b, true, depth + 1));
+    b[i] = "";
+  }
+  return best;
+}
+function bestMove(b) {
+  let bi = -1, bv = -Infinity;
+  const order = [4, 0, 2, 6, 8, 1, 3, 5, 7];
+  for (let i of order) if (!b[i]) {
+    b[i] = "o";
+    const v = minimax(b, false, 0);
+    b[i] = "";
+    if (v > bv) { bv = v; bi = i; }
+  }
+  return bi;
+}
+function render() {
+  document.querySelector("#sx b").textContent = scores.x;
+  document.querySelector("#st b").textContent = scores.ties;
+  document.querySelector("#so b").textContent = scores.o;
+  document.querySelectorAll("#board .cell").forEach((el, i) => {
+    el.textContent = board[i];
+    el.className = "cell" + (board[i] ? " taken " + board[i].toLowerCase() : "");
+  });
+  document.querySelector("#sx").classList.toggle("turn", !over && turn === "x");
+  document.querySelector("#so").classList.toggle("turn", !over && turn === "o");
+}
+function saveScores() {
+  try { localStorage.setItem("fz_ttt_scores", JSON.stringify(scores)); } catch (e) {}
+}
+function finish(w) {
+  over = true;
+  if (w.line) w.line.forEach(i => cells[i].classList.add("win"));
+  if (w.who === "tie") {
+    scores.ties++; msgEl.textContent = "tie game";
+    beep(300, 0.2);
+  } else {
+    scores[w.who]++; msgEl.textContent = w.who + " wins";
+    beep(w.who === "x" ? 700 : 420, 0.25);
+  }
+  saveScores(); render();
+}
+function play(i) {
+  if (over || board[i]) return;
+  board[i] = turn;
+  beep(turn === "x" ? 520 : 440, 0.08);
+  const w = winner(board);
+  render();
+  if (w) return finish(w);
+  turn = turn === "x" ? "o" : "x";
+  render();
+  msgEl.textContent = mode === 1 && turn === "o" ? "cpu thinking…" : (turn === "x" ? "x to move" : "o to move");
+  if (mode === 1 && turn === "o" && !over) {
+    setTimeout(() => {
+      if (over) return;
+      const m = bestMove(board.slice());
+      if (m >= 0) play(m);
+    }, 380);
+  }
+}
+function newRound(starter) {
+  board = ["","","","","","","","",""];
+  turn = starter || "x"; over = false;
+  msgEl.textContent = turn === "x" ? "x to move" : "o to move";
+  render();
+  if (mode === 1 && turn === "o") {
+    setTimeout(() => { if (!over) { const m = bestMove(board.slice()); if (m >= 0) play(m); } }, 380);
+  }
+}
+for (let i = 0; i < 9; i++) {
+  const el = document.createElement("div");
+  el.className = "cell";
+  el.addEventListener("click", () => play(i));
+  boardEl.appendChild(el);
+  cells.push(el);
+}
+m1Btn.addEventListener("click", () => {
+  mode = 1;
+  m1Btn.classList.add("active"); m2Btn.classList.remove("active");
+  newRound("x");
+});
+m2Btn.addEventListener("click", () => {
+  mode = 2;
+  m2Btn.classList.add("active"); m1Btn.classList.remove("active");
+  newRound("x");
+});
+document.getElementById("rs").addEventListener("click", () => newRound("x"));
+document.addEventListener("keydown", e => {
+  if (e.key >= "1" && e.key <= "9") play(+e.key - 1);
+  else if (e.key === "r" || e.key === "R") newRound("x");
+  else if (e.key === "m" || e.key === "M") {
+    muted = !muted;
+    try { localStorage.setItem("fz_ttt_mute", muted ? "1" : "0"); } catch (e2) {}
+  }
+});
+mode = 1;
+newRound("x");
+render();
+</script>
 </body>
 </html>
